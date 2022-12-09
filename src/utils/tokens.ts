@@ -1,6 +1,6 @@
 import { Token } from '@uniswap/sdk-core'
-import { CeloNetworkInfo, NetworkInfo, PolygonNetworkInfo } from 'constants/networks'
-import { CELO_ADDRESS, MATIC_ADDRESS, WETH_ADDRESSES } from '../constants'
+import { CeloNetworkInfo, NetworkInfo, PolygonNetworkInfo, TmyNetworkInfo } from 'constants/networks'
+import { CELO_ADDRESS, MATIC_ADDRESS, WETH_ADDRESSES, WTMY_ADDRESS } from '../constants'
 
 export interface SerializedToken {
   chainId: number
@@ -26,6 +26,10 @@ export function formatTokenSymbol(address: string, symbol: string, activeNetwork
     return 'MATIC'
   }
 
+  if (address === WTMY_ADDRESS && activeNetwork === TmyNetworkInfo) {
+    return 'TMY'
+  }
+
   // dumb catch for Celo
   if (address === CELO_ADDRESS && activeNetwork === CeloNetworkInfo) {
     return 'CELO'
@@ -46,6 +50,10 @@ export function formatTokenName(address: string, name: string, activeNetwork?: N
   // dumb catch for Celo
   if (address === CELO_ADDRESS && activeNetwork === CeloNetworkInfo) {
     return 'CELO'
+  }
+
+  if (address === WTMY_ADDRESS && activeNetwork === TmyNetworkInfo) {
+    return 'TMY'
   }
 
   if (WETH_ADDRESSES.includes(address)) {

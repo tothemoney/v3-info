@@ -5,7 +5,13 @@ import { Contract } from '@ethersproject/contracts'
 import { JsonRpcSigner, Web3Provider } from '@ethersproject/providers'
 import { Currency, CurrencyAmount, Fraction, Percent, Token } from '@uniswap/sdk-core'
 import { SupportedChainId } from 'constants/chains'
-import { ArbitrumNetworkInfo, CeloNetworkInfo, NetworkInfo, PolygonNetworkInfo } from 'constants/networks'
+import {
+  ArbitrumNetworkInfo,
+  CeloNetworkInfo,
+  NetworkInfo,
+  PolygonNetworkInfo,
+  TmyNetworkInfo,
+} from 'constants/networks'
 import JSBI from 'jsbi'
 import { TokenAddressMap } from '../state/lists/hooks'
 import { OptimismNetworkInfo } from '../constants/networks'
@@ -44,6 +50,8 @@ export function getEtherscanLink(
       ? 'https://arbiscan.io/'
       : networkVersion === OptimismNetworkInfo
       ? 'https://optimistic.etherscan.io'
+      : networkVersion === TmyNetworkInfo
+      ? 'https://tmyscan.com'
       : `https://${ETHERSCAN_PREFIXES[chainId] || ETHERSCAN_PREFIXES[1]}etherscan.io`
 
   if (networkVersion === OptimismNetworkInfo) {

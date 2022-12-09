@@ -1,5 +1,5 @@
 import { createReducer, nanoid } from '@reduxjs/toolkit'
-import { NetworkInfo } from 'constants/networks'
+import { NetworkInfo, TmyNetworkInfo } from 'constants/networks'
 import {
   addPopup,
   PopupContent,
@@ -35,7 +35,7 @@ const initialState: ApplicationState = {
     syncedBlock: undefined,
     headBlock: undefined,
   },
-  activeNetworkVersion: EthereumNetworkInfo,
+  activeNetworkVersion: TmyNetworkInfo,
 }
 
 export default createReducer(initialState, (builder) =>

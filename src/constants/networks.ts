@@ -3,6 +3,7 @@ import ARBITRUM_LOGO_URL from '../assets/images/arbitrum.svg'
 import ETHEREUM_LOGO_URL from '../assets/images/ethereum-logo.png'
 import POLYGON_LOGO_URL from '../assets/images/polygon-logo.png'
 import CELO_LOGO_URL from '../assets/images/celo-logo.svg'
+import TMY_LOGO_URL from '../assets/images/tmy.svg'
 
 export enum SupportedNetwork {
   ETHEREUM,
@@ -10,6 +11,7 @@ export enum SupportedNetwork {
   OPTIMISM,
   POLYGON,
   CELO,
+  TMY,
 }
 
 export type NetworkInfo = {
@@ -73,6 +75,16 @@ export const CeloNetworkInfo: NetworkInfo = {
   imageURL: CELO_LOGO_URL,
   blurb: '',
 }
+export const TmyNetworkInfo: NetworkInfo = {
+  id: SupportedNetwork.TMY,
+  route: 'tmy',
+  name: 'Tmy',
+  bgColor: '#F01B36',
+  primaryColor: '#F01B36',
+  secondaryColor: '#FB7876',
+  imageURL: TMY_LOGO_URL,
+  blurb: '',
+}
 
 export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
   EthereumNetworkInfo,
@@ -80,4 +92,5 @@ export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
   OptimismNetworkInfo,
   ArbitrumNetworkInfo,
   CeloNetworkInfo,
+  TmyNetworkInfo,
 ]
