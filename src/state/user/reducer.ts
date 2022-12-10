@@ -48,7 +48,7 @@ function pairKey(token0Address: string, token1Address: string) {
 }
 
 export const initialState: UserState = {
-  userDarkMode: false,
+  userDarkMode: true,
   matchesDarkMode: false,
   tokens: {},
   pairs: {},

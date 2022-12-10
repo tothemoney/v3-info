@@ -79,18 +79,11 @@ export const TmyNetworkInfo: NetworkInfo = {
   id: SupportedNetwork.TMY,
   route: 'tmy',
   name: 'Tmy',
-  bgColor: '#F01B36',
-  primaryColor: '#F01B36',
-  secondaryColor: '#FB7876',
+  bgColor: '#6D00F3',
+  primaryColor: '#6500d4',
+  secondaryColor: '#b77aff',
   imageURL: TMY_LOGO_URL,
   blurb: '',
 }
 
-export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
-  EthereumNetworkInfo,
-  PolygonNetworkInfo,
-  OptimismNetworkInfo,
-  ArbitrumNetworkInfo,
-  CeloNetworkInfo,
-  TmyNetworkInfo,
-]
+export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [TmyNetworkInfo]

@@ -32,16 +32,21 @@ const TopBar = () => {
         <Polling />
         <AutoRow gap="6px">
           <RowFixed>
-            {activeNetwork.id === SupportedNetwork.CELO ? <Item>Celo Price:</Item> : <Item>Eth Price:</Item>}
+            {activeNetwork.id === SupportedNetwork.CELO ? (
+              <Item>Celo Price:</Item>
+            ) : activeNetwork.id === SupportedNetwork.TMY ? (
+              <Item>TMY price</Item>
+            ) : (
+              <Item>Eth Price:</Item>
+            )}
             <Item fontWeight="700" ml="4px">
               {formatDollarAmount(ethPrices?.current)}
             </Item>
           </RowFixed>
         </AutoRow>
         <AutoRow gap="6px" style={{ justifyContent: 'flex-end' }}>
-          <StyledLink href="https://v2.info.uniswap.org/#/">V2 Analytics</StyledLink>
-          <StyledLink href="https://docs.uniswap.org/">Docs</StyledLink>
-          <StyledLink href="https://app.uniswap.org/#/swap">App</StyledLink>
+          <StyledLink href="https://docs.tmyswap.org/">Docs</StyledLink>
+          <StyledLink href="https://tmyswap.org/#/swap">App</StyledLink>
         </AutoRow>
       </RowBetween>
     </Wrapper>
