@@ -221,7 +221,7 @@ export const celoBlockClient = new ApolloClient({
 })
 
 export const tmyClient = new ApolloClient({
-  uri: 'http://62.204.42.201:8000/subgraphs/name/tmychain/tmyswap-v3',
+  uri: 'https://graph.tmyswap.org/infov3',
   cache: new InMemoryCache({
     typePolicies: {
       Token: {
@@ -249,7 +249,7 @@ export const tmyClient = new ApolloClient({
 })
 
 export const tmyBlockClient = new ApolloClient({
-  uri: 'http://62.204.42.201:8000/subgraphs/name/tmychain/tmy-blocks',
+  uri: 'https://graph.tmyswap.org/blocks',
   cache: new InMemoryCache(),
   queryDeduplication: true,
   defaultOptions: {

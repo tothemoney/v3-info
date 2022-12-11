@@ -78,7 +78,7 @@ export const CeloNetworkInfo: NetworkInfo = {
 export const TmyNetworkInfo: NetworkInfo = {
   id: SupportedNetwork.TMY,
   route: 'tmy',
-  name: 'Tmy',
+  name: 'TMY',
   bgColor: '#6D00F3',
   primaryColor: '#6500d4',
   secondaryColor: '#b77aff',
